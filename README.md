@@ -40,12 +40,10 @@ One row per DbD-focused launch. Add columns as needed; minimum suggested:
 | `name` | Short name (e.g. "PCO ranker v6", "DbD entry placement") |
 | `launch_date` | Ship date (YYYY-MM-DD) |
 | `surface` | PCO, PCC|
-| `primary_focus` | Brief description of what was tested |
-| `dbd_primary_metric` | Main DbD metric (e.g. DbD attach rate, DbD orders) |
-| `core_metrics_measured` | Y/N or list: were core/ halo metrics in the test? |
+| `context` | Brief description of what was tested - not needed for XP's with Brief/Readout |
 | `prd/brief` | Link(s) to PRD or product brief (single field; comma-separate if multiple) |
 | `readout` | Link or path to readout for initiatives that have one (leave blank if none) |
-| `notes` | Power for halo, caveats, link to dashboard |
+| `notes` | Caveats/Callouts, other free form observations |
 
 Starter CSV header (copy to `experiments/experiment_list.csv`):
 

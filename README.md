@@ -10,6 +10,7 @@ We use the resources in this repo to specifically:
 
 - **Collect data** experiment list, product briefs/readouts, and metric definitions in one place.
 - **Analyze** whether DbD gains are associated with non-DbD order rate and other core outcomes across experiments.
+- **Inform** our evaluation of net incrementality through a robust, recursive meta-analysis of experiment results. 
 
 ---
 
@@ -20,8 +21,8 @@ We use the resources in this repo to specifically:
 ├── README.md                 # This file
 ├── experiments/              # Experiment list (briefs & readouts linked in CSV)
 │   └── experiment_list.csv   # Master list of DbD launches (see template below)
-├── metric_sets/              # Metric definitions and P0/core sets
-│   └── metric_definitions.md # DbD P0 vs core/DoorDash metrics
+├── metric_reference/              # Metric definitions and P0/core sets
+│   └── dbd-metric-reference.csv # Pulled over from DbD semantic layer; a list  of key DbD /DD core metrics. 
 └── analysis/                 # Scripts and outputs for comparative analysis
     └── .gitkeep
 ```
@@ -57,7 +58,7 @@ Keep experiments in reverse chronological order (newest first). Briefs and reado
 
 ## 2. Metric Reference
 
-**File:** `metric_sets/dbd_metric_reference.csv`
+**File:** `metric_reference/dbd-metric-reference.csv`
 
 This file, created by the DbD Ax team for their semantic layer, ensures the consistet, sanctioned metric-level interpretation is executed across experiments. 
 

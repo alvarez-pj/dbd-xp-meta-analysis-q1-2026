@@ -19,11 +19,11 @@ We use the resources in this repo to specifically:
 ```
 .
 ├── README.md                 # This file
-├── experiments/              # Experiment list (briefs & readouts linked in CSV)
+├── experiments/              # Experiment list (name, launch date, surface, and links to prd/briefs/readouts/curies)
 │   └── experiment_list.csv   # Master list of DbD launches (see template below)
 ├── metric_reference/              # Metric definitions and P0/core sets
 │   └── dbd-metric-reference.csv # Pulled over from DbD semantic layer; a list  of key DbD /DD core metrics. 
-└── analysis/                 # Scripts and outputs for comparative analysis
+└── experiment-results/                 # CSV exports of curie results for each of the 61 experiments selected
     └── .gitkeep
 ```
 
@@ -37,22 +37,13 @@ One row per DbD-focused launch. Add columns as needed; minimum suggested:
 
 | Column | Description |
 |--------|-------------|
-| `experiment_id` | Internal or platform experiment ID |
 | `name` | Short name (e.g. "PCO ranker v6", "DbD entry placement") |
 | `launch_date` | Ship date (YYYY-MM-DD) |
-| `surface` | PCO, PCC|
-| `context` | Brief description of what was tested - not needed for XP's with Brief/Readout |
-| `prd/brief` | Link(s) to PRD or product brief (single field; comma-separate if multiple) |
-| `readout` | Link or path to readout for initiatives that have one (leave blank if none) |
-| `notes` | Caveats/Callouts, other free form observations |
-
-Starter CSV header (copy to `experiments/experiment_list.csv`):
-
-```csv
-experiment_id,name,launch_date,surface,primary_focus,dbd_primary_metric,core_metrics_measured,prd/brief,readout,notes
-```
-
-Keep experiments in reverse chronological order (newest first). Briefs and readouts are linked only via the `prd/brief` and `readout` columns (URLs or paths to docs elsewhere); nothing is stored in this repo.
+| `analysis_name` | field to be used to map to the corresponding CSV in the experiment-results folder |
+| `surface` | PCO, PCC, Both|
+| `prd/brief/context` | Link(s) to PRD or product brief|
+| `readout` | Link or path to readout for initiatives that have one ( blank if none) |
+| `curie_link` | Link to curie analysis used for CSV generation |
 
 ---
 
@@ -66,12 +57,10 @@ This file, created by the DbD Ax team for their semantic layer, ensures the cons
 
 ## 3. Analysis
 
-**Directory:** `analysis/`
+**Directory:** `experiment-results/`
 
  **Metric result CSVs** — Store experiment metric results here as CSVs (do not rely on warehoused Curie metric tables in Snowflake). This ensures fidelity: snowflake-native Curie tables do not have perfect vintage/alignment with final readout results.
-- **Matching** — Link to the experiment list by experiment name (same `name` as in `experiments/experiment_list.csv`).
-- **Scripts** — Cross-experiment analysis (e.g. correlation of DbD lift vs core lift, ITT on core outcomes, power audit) reads from these CSVs.
-- **Outputs** — Tables, plots, and a short summary of findings (indisputable vs unclear → Phase 2).
+- **Matching** — Link to the experiment list by experiment name (same `analysis_name` as in `experiments/experiment_list.csv`).
 
 ---
 
@@ -81,6 +70,6 @@ Data Ingestion is a 3 step process:
 
 1. **Add experiments** — Append rows to `experiments/experiment_list.csv` for each DbD launch in scope (e.g. last X quarters/years). Put PRD/brief and readout links in the `prd/brief` and `readout` columns.
 2. **Maintain metric sets** — Update `metric_sets/dbd_metric_reference.csv` when P0 or core metrics change.
-3. **Run comparative analysis** — Use `analysis/` to produce evidence for “DbD ↔ core” and the go/no-go for a holdout.
+3. **Run comparative analysis** — Use `analysis/` to produce evidence for “DbD ↔ core” comparisons
 
 --

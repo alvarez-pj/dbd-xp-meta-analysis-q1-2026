@@ -1,0 +1,8 @@
+dd_metric,n_experiments,mean_dbd_order_rate_lift_pct,mean_dd_lift_pct,wald
+consumers_mau,34,1.3845,-0.0406,-0.0293
+dsmp_order_rate,2,1.5049,0.1059,0.0704
+dsmp_order_rate_7d,7,0.7235,0.0107,0.0148
+dsmp_order_rate_14d,4,0.5744,-0.0221,-0.0384
+dsmp_order_rate_28d,3,0.5622,0.2029,0.3608
+dsmp_gov,4,0.6465,-0.0044,-0.0068
+order_rate_per_entity_7d,16,1.075,0.1177,0.1095

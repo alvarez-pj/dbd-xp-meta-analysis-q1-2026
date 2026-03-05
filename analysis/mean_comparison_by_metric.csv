@@ -1,0 +1,16 @@
+metric,type,n,mean_lift_pct
+dbd_order_rate,DbD,42,1.3711
+dbd_o2_gmv,DbD,42,1.2516
+dbd_attach_rate_post_checkout,DbD,45,3.5589
+dbd_attach_rate_pre_checkout,DbD,39,4.6738
+dbd_attach_rate_pre_and_post,DbD,39,2.0163
+consumers_mau,DD,37,-0.0358
+dsmp_order_rate,DD,2,0.1059
+dsmp_order_rate_7d,DD,8,0.0251
+dsmp_order_rate_14d,DD,5,0.012
+dsmp_order_rate_28d,DD,3,0.2029
+dsmp_gov,DD,4,-0.0044
+order_rate_per_entity,DD,0,
+order_rate_per_entity_7d,DD,16,0.1177
+order_rate_per_entity_14d,DD,0,
+order_rate_per_entity_28d,DD,0,

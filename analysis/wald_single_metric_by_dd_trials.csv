@@ -1,0 +1,14 @@
+dd_metric,n_experiments,mean_trials_lift_pct,mean_dd_lift_pct,wald
+consumers_mau,41,2.7376,0.0012,0.0004
+dsmp_gov,4,0.2212,-0.0048,-0.0217
+o1_order_rate,23,2.3772,0.0119,0.005
+o1_order_rate_7d,28,3.2459,0.0031,0.001
+o1_order_rate_14d,4,8.0197,0.1329,0.0166
+o1_subtotal,46,2.6012,0.0043,0.0017
+o1_aov,46,2.6012,0.005,0.0019
+o1_gmv,46,2.6012,0.0046,0.0018
+o1_vp,46,2.6012,-0.0052,-0.002
+o1_vp_per_cx,45,2.5821,0.0117,0.0045
+active_share_7d,13,2.6426,-0.021,-0.008
+consumer_order_frequency_l_28_d,27,2.6575,0.0608,0.0229
+consumers_order_frequency_l_28_d,1,0.0753,0.0379,0.5033
